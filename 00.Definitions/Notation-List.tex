@@ -1,0 +1,427 @@
+%% Glossaries : Notation Glossaries type
+%% \newglossary[slg]{symbolslist}{syi}{syg}{Notation} 
+
+%% run commands:
+%
+% > pdflatex tese
+% > makeglossaries tese
+% > pdflatex tese
+%%
+%%
+% These commands are equivalent to the following commands (for makeindex or xindy (template default) ):
+%	http://texblog.org/2014/01/15/glossary-and-list-of-acronyms-with-latex/
+
+%% makeindex:
+%# Glossary
+% > makeindex -s filename.ist -t filename.glg -o filename.gls filename.glo
+%# List of acronyms
+% > makeindex -s filename.ist -t filename.alg -o filename.acr filename.acn
+%%%
+
+%% xindy:
+% > xindy  -L english -C utf8 -I xindy -M myDoc -t myDoc.glg
+%     -o myDoc.gls myDoc.glo
+%  >  xindy  -L english -C utf8 -I xindy -M myDoc -t myDoc.alg
+%     -o myDoc.acr myDoc.acn
+% >   xindy  -L english -C utf8 -I xindy -M myDoc -t myDoc.nlg
+%     -o myDoc.not myDoc.ntn
+%
+% > xindy  -L english -C utf8 -L xindy -M tese -t tese.glg
+%     -o tese.gls tese.glo
+% >  xindy  -L english -C utf8 -L xindy -M tese -t tese.alg
+%     -o tese.acr tese.acn
+%%%
+
+
+%% ---------------------- Declare Glossaries :
+%
+% -------------> para traduzir para PT títulos das secções de notação, traduzir nomes abaixo.
+\newglossary*{latinletters}{Latin Letters}
+\newglossary*{greekletters}{Greek Letters}
+\newglossary*{subscripts}{Subscripts}
+\newglossary*{ratesratios}{Rates and Ratios} % Parecer do Juri sugeriu a junção de ambas as secções
+
+
+
+%% ---------------- TERM DEFINITIONS
+%% Some notation entries. Alter as you see fit.
+
+%LATIN
+\newglossaryentry{A}{%sort=aA, 
+name={\ensuremath{A}}, 
+description={Cross-sectional area [\si{\meter\squared}]}, 
+type=latinletters}
+
+\newglossaryentry{a}{%sort=aa, 
+name={\ensuremath{a}}, 
+description={Total surface area per unit length [\si{\meter}]}, 
+type=latinletters}
+
+\newglossaryentry{Cd}{%sort=aCd, 
+name={\ensuremath{C_D}}, 
+description={Drag coefficient [ ]}, 
+type=latinletters}
+
+\newglossaryentry{Cvm}{%sort=aCvm, 
+name={\ensuremath{C_{vm}}}, 
+description={Virtual-mass coefficient [ ]}, 
+type=latinletters}
+
+\newglossaryentry{c}{type=latinletters, name={\ensuremath{\mathsf{c}}},  description={Constant [ ]}}
+
+\newglossaryentry{cp}{type=latinletters, 
+name={\ensuremath{c_{p}}}, description={Specific heat capacity at constant pressure [\si{\joule\per\kilogram\per\kelvin}]}}
+
+\newglossaryentry{cv}{type=latinletters, 
+name={\ensuremath{c_{V}}}, description={Specific heat capacity at constant volume [\si{\joule\per\kilogram\per\kelvin}]}}
+
+\newglossaryentry{D}{sort=d,
+name={\ensuremath{D}},
+description={Diameter [\si{\meter}]},
+type=latinletters}
+
+\newglossaryentry{D_d}{%sort=aDd, 
+name={\ensuremath{D_d}}, 
+description={Droplet diameter [\si{\meter}]}, 
+type=latinletters}
+
+%https://en.wikipedia.org/wiki/Mass_diffusivity
+\newglossaryentry{Diff}{%sort=aDiff, 
+name={\ensuremath{\mathcal D}}, 
+description={Diffusion coefficient / Mass Diffusivity [\si{\meter\squared\per\second}]}, 
+type=latinletters}
+
+\newglossaryentry{e}{%sort=ae, 
+name={\ensuremath{e}}, 
+description={Specific internal energy [\si{\joule\per\kilogram}]}, 
+type=latinletters} %[$kJ/kg$]
+
+\newglossaryentry{F}{type=latinletters, name={\ensuremath{F}}, description={Force [\si{\newton}]}}
+
+\newglossaryentry{h}{type=latinletters, 
+name={\ensuremath{h}}, description={Specific enthalpy [\si{\joule\per\kilogram}]}} %[$kJ/kg$]
+
+\newglossaryentry{hm}{%sort=ahm, 
+name={\ensuremath{h_m}}, 
+description={Mass-transfer coefficient [\si{\kg\per\meter\per\second}]}, 
+type=latinletters}
+
+\newglossaryentry{hq}{%sort=ahq, 
+name={\ensuremath{h_q}}, 
+description={Convective heat transfer coefficient [\si{\W\per\meter\per\kelvin}]}, 
+type=latinletters}
+
+\newglossaryentry{m}{%sort=am, 
+name={\ensuremath{m}}, 
+description={Mass [\si{\kg}]}, 
+type=latinletters}
+
+\newglossaryentry{M}{%sort=aM, 
+name={\ensuremath{\mathbb{M}}}, 
+description={Molecular mass [\si{\kg\per\kmol}]}, 
+type=latinletters}
+
+\newglossaryentry{n}{%sort=an, 
+name={\ensuremath{n}}, 
+description={Number of moles [mol]}, 
+type=latinletters}
+
+\newglossaryentry{N}{%sort=aN, 
+name={\ensuremath{N}}, 
+description={Total number of nodes in a space discretisation (in section \ref{section:majorant:3}) [ ]}, 
+type=latinletters}
+
+\newglossaryentry{N-d}{%sort=aN-d, 
+name={\ensuremath{N_d}}, 
+description={Total number of the droplets in a control volume [ ]}, 
+type=latinletters}
+
+\newglossaryentry{nd}{%sort=and, 
+name={\ensuremath{n_d}}, 
+description={Number of the droplets per unit volume [\si{\per\meter\tothe{3}}]}, 
+type=latinletters}
+
+\newglossaryentry{P}{type=latinletters, 
+name={\ensuremath{P}}, description={Pressure (total pressure) [\si{\Pa}]}} %[$Pa$]
+
+\newglossaryentry{p}{type=latinletters, 
+name={\ensuremath{p}}, description={Pressure (static pressure) [\si{\Pa}]}} %[$Pa$]
+
+\newglossaryentry{Q}{%sort=aQ, 
+name={\ensuremath{Q}}, 
+description={Heat [\si{\joule}]}, 
+type=latinletters} 
+
+\newglossaryentry{q}{%sort=aQ, 
+name={\ensuremath{q}}, 
+description={Specific heat [\si{\joule\per\kilogram}]}, 
+type=latinletters} 
+
+\newglossaryentry{S}{%sort=aS, 
+name={\ensuremath{S}}, 
+description={Surface [\si{\meter\squared}]}, 
+type=latinletters} 
+
+\newglossaryentry{W}{type=latinletters, 
+name={\ensuremath{W}}, description={Work [\si{\joule}]}} 
+
+\newglossaryentry{w}{type=latinletters, 
+name={\ensuremath{w}}, description={Specific work [\si{\joule\per\kilogram}]}} 
+
+\newglossaryentry{u}{type=latinletters, 
+name={\ensuremath{u}}, description={Velocity [\si{\meter\per\second}]}}
+
+\newglossaryentry{V}{%sort=au, 
+name={\ensuremath{V}}, 
+description={Volume [\si{\meter\tothe{3}}]}, 
+type=latinletters}
+
+\newglossaryentry{v}{%sort=au, 
+name={\ensuremath{v}}, 
+description={Specific volume [\si{\kilogram\per\meter\tothe{3}}]}, 
+type=latinletters}
+
+\newglossaryentry{T}{type=latinletters, 
+name={\ensuremath{T}}, description={Temperature [\si{\degreeCelsius} ]}} %[$K$]
+
+\newglossaryentry{t}{type=latinletters, 
+name={\ensuremath{t}}, 
+description={time [\si{\second}]} }
+
+\newglossaryentry{x}{type=latinletters, 
+name={\ensuremath{x}}, description={Refrigerant mole fraction [mol/mol]}} %[$kg/kg$]
+
+\newglossaryentry{K}{type=latinletters, name={\ensuremath{K}}, description={Head Loss Coefficient [ ]}}
+
+%GREEK
+
+\newglossaryentry{alpha}{name={\ensuremath{\alpha}}, description={Angle [\si{\degree}]}, type=greekletters,sort={alpha}}
+
+\newglossaryentry{chi}{type=greekletters, name={\ensuremath{\chi}}, description={Quality [\si{\kg / \kg}]},
+sort={chi}} %$kg/kg$
+
+\newglossaryentry{gamma}{type=greekletters,
+name={\ensuremath{\gamma}}, 
+description={Adiabatic index $\frac{c_p}{c_V}$ [\si{\joule\per\kilogram\per\kelvin}/(\si{\joule\per\kilogram\per\kelvin})]},
+sort={gamma} }
+
+\newglossaryentry{phi}{type=greekletters,
+name={\ensuremath{\phi}}, 
+description={Ratio of the gas and liquid volume flow rates $\dot{V}_g/\dot{V}_L$},
+sort={phi} }
+
+\newglossaryentry{Phi}{type=greekletters,
+name={\ensuremath{\Phi}}, 
+description={Generic scalar quantity or function},
+sort={Phi} }
+
+\newglossaryentry{rho}{type=greekletters, 
+name={\ensuremath{\rho}}, description={Mass density  [\si{\kilogram\per\metre\tothe{3}}]},
+sort={rho}} %[$kg/m^3$]
+
+\newglossaryentry{xi}{type=greekletters, name={\ensuremath{\xi}}, description={Refrigerant mass fraction [\si{\kg / \kg}]},
+sort={xi}}
+
+\newglossaryentry{xi_s}{type=greekletters, name={\ensuremath{\xi^*}}, description={Equilibrium mass fraction [\si{\kg / \kg}]},
+sort={xis}}
+
+\newglossaryentry{eta}{type=greekletters, name={\ensuremath{\eta}}, description={Efficiency [ ]},sort={eta}}
+
+\newglossaryentry{varepsilon}{type=greekletters, 
+name={\ensuremath{\varepsilon}}, description={Volume fraction / Void fraction [\si{\meter\tothe{3}/\meter\tothe{3}}]},sort={varepsilon}}
+
+\newglossaryentry{Theta}{sort={Theta}, 
+name={\ensuremath{\Theta}}, 
+description={Void Function}, 
+type=greekletters} %$kJ/kJ$
+
+\newglossaryentry{beta}{sort={beta}, 
+name={\ensuremath{\beta}}, 
+description={Finite volume constants}, 
+type=greekletters} 
+
+\newglossaryentry{sigma}{sort={sigma}, 
+name={\ensuremath{\sigma}}, 
+description={Surface tension [\si{\newton\per\meter}]}, %= kg / s^2  = J/m^2  ... \kilogram\per\metre\per\second 
+type=greekletters} 
+
+\newglossaryentry{mu}{sort={mu}, 
+name={\ensuremath{\mu}}, 
+description={Viscosity [\si{\pascal\second}]}, %= kg / s^2  = J/m^2  ... \kilogram\per\metre\per\second 
+type=greekletters} 
+
+\newglossaryentry{nu}{sort={nu}, 
+name={\ensuremath{\nu}}, 
+description={Viscosity [\si{\meter\squared\per\second}]}, %= kg / s^2  = J/m^2  ... \kilogram\per\metre\per\second 
+type=greekletters} 
+
+%SUBSCRIPTS
+
+\newglossaryentry{_a}{type=subscripts, name={\ensuremath{_a}}, description={Absorber}}
+
+\newglossaryentry{_c}{type=subscripts, name={\ensuremath{_c}}, description={Condenser}}
+
+\newglossaryentry{_g}{type=subscripts, name={\ensuremath{_g}}, description={Generator}}
+
+\newglossaryentry{_e}{type=subscripts, name={\ensuremath{_e}}, description={Evaporator}}
+
+\newglossaryentry{_d}{type=subscripts, name={\ensuremath{_d}}, description={Dispersed Phase / Droplets}}
+
+\newglossaryentry{_gd}{type=subscripts, name={\ensuremath{_{gd}}}, description={Vapour-droplet interface}}
+
+\newglossaryentry{_s}{type=subscripts, name={\ensuremath{_s}}, description={Solution, in general, or strong solution in absorption and ejector-absorber cycles}}
+
+\newglossaryentry{_v}{type=subscripts, name={\ensuremath{_v}}, description={Vapour}}
+
+\newglossaryentry{_V}{type=subscripts, name={\ensuremath{_V}}, description={Constant volume process}}
+
+\newglossaryentry{_P}{type=subscripts, name={\ensuremath{_P}}, description={Constant pressure volume}}
+
+\newglossaryentry{_p}{type=subscripts, name={\ensuremath{_p}}, description={Related to the pump}}
+
+\newglossaryentry{_r}{type=subscripts, name={\ensuremath{_r}}, description={Refrigerant}}
+
+\newglossaryentry{_w}{type=subscripts, name={\ensuremath{_w}}, description={Weak solution (ammonia-water absorption cycle) or concentrated solution (salt absorption cycle), \secref{sec:stdabscycle:salt})}}
+
+\newglossaryentry{_N}{type=subscripts, name={\ensuremath{_N}}, description={Nozzle}}
+
+\newglossaryentry{_M}{type=subscripts, name={\ensuremath{_M}}, description={Mixing / Mixing tube}}
+
+\newglossaryentry{_D}{type=subscripts, name={\ensuremath{_D}}, description={Diffuser}}
+
+\newglossaryentry{_mix}{type=subscripts, name={\ensuremath{_\text{mix}}}, description={Mixture}}
+
+\newglossaryentry{_i}{type=subscripts, name={\ensuremath{_i}}, description={Node $i$ in a discretised space}}
+
+\newglossaryentry{_crit}{name={\ensuremath{_\text{crit}}}, description={Critical value}, type=subscripts}
+
+\newglossaryentry{_abs}{name={\ensuremath{_\text{abs}}}, description={Absorption value}, type=subscripts}
+
+\newglossaryentry{_nb}{name={\ensuremath{_\text{nb}}}, description={Neighbour nodes}, type=subscripts}
+
+\newglossaryentry{_vol}{name={\ensuremath{_\text{vol}}}, description={Related to the volume}, type=subscripts}
+
+\newglossaryentry{_cs}{name={\ensuremath{_\text{c-s}}}, description={Related to the cross-sectional area}, type=subscripts}
+
+\newglossaryentry{_H}{name={\ensuremath{_H}}, description={High Pressure, $p_H$}, type=subscripts}
+
+\newglossaryentry{_L}{name={\ensuremath{_L}}, description={Low Pressure, $P_L$}, type=subscripts}
+
+\newglossaryentry{_col}{name={\ensuremath{_{col.}}}, description={related to the solar collector}, type=subscripts}
+
+\newglossaryentry{_shx}{name={\ensuremath{_{SHX}}}, description={related to the solution heat exchanger}, type=subscripts}
+
+\newglossaryentry{_re}{name={\ensuremath{_\text{re}}}, description={related to recirculation of the solution around the ejector-pump}, type=subscripts}
+
+%RATES 
+\newglossaryentry{mflow}{type=ratesratios, 
+name={\ensuremath{\mflow}}, 
+description={Mass flow rate [\si{\kg\per\second}]},
+sort={mflow}} %[$kg/s$]
+
+\newglossaryentry{Qdot}{type=ratesratios, 
+name={\ensuremath{\dot{Q}}}, 
+description={Heat Power / Heat per unit of time [\si{\kilo\joule\per\second}]},
+sort={Qdot}} %$kJ/s$
+
+\newglossaryentry{qdot}{type=ratesratios, 
+name={\ensuremath{\dot{q}}}, 
+description={Specific heat power [\si{\kilo\joule\per\second\per\kilogram}]},
+sort={qdot}} %$kJ/s$
+
+\newglossaryentry{Wdot}{type=ratesratios, 
+name={\ensuremath{\dot{W}}}, 
+description={Power [\si{\kilo\joule\per\second}]},
+sort={Wdot}} %$kJ/s$
+
+\newglossaryentry{Vdot}{type=ratesratios, 
+name={\ensuremath{\dot{V}}}, 
+description={  Volume flow rate [\si{\metre\tothe{3}\per\second}]},
+sort={Vdot}}
+
+%RATIOS
+\newglossaryentry{Eu}{%sort=eEu, 
+name={\ensuremath{ Eu}}, 
+description={Euler number $\Delta P/(\rho_v u_v^2)$, where $\Delta P$ is the pressure difference between the absorber and the evaporator }, 
+type=ratesratios} %[\si{\Pa}/\si{\Pa}]
+
+\newglossaryentry{slip}{sort={slip}, 
+name={\ensuremath{u_{v/s}} }, 
+description={Slip ratio $\frac{u_v}{u_s}$ }, 
+type=ratesratios} %[\si{\meter\per\second / \meter\per\second}]
+
+\newglossaryentry{circ}{type=ratesratios, 
+name={\ensuremath{f}}, 
+description={Circulation ratio $\frac{\mflow_s}{\mflow_v}$  } }%,[ ]
+%text={circulation ratio} } %[$kJ/kg$]
+
+\newglossaryentry{DPr}{type=ratesratios, 
+name={\ensuremath{\Delta P_r}}, 
+description={Pressure recovery ratio \\ $\Delta P_{r}\equiv\frac{P_{a}-P_{e}}{P_{g}-P_{e}}$ },
+sort={DPr}}%[ ]
+
+\newglossaryentry{DPrt}{type=ratesratios, 
+name={\ensuremath{\Delta P_r'}}, 
+description={Compression-expansion ratio $\Delta P_{r}'\equiv\frac{P_a-P_e}{P_g-P_a}$ },
+sort={DPrt}} %[ ]
+
+%\newglossaryentry{mvs}{type=ratesratios, 
+%name={\ensuremath{\mflow_{vs}}}, 
+%description={ Mass flow ratio is $\mflow_{vs}=\frac{\mflow_{2v}}{\mflow_{2s}}$  [\si{\kilogram\per\second\per\kilogram\second}] }}
+\newglossaryentry{mvs}{type=ratesratios, 
+name={\ensuremath{\mflow_{vs}}}, 
+description={ Mass flow ratio is $\mflow_{vs}=\frac{\mflow_{2v}}{\mflow_{2s}}$  },
+sort={mvs}} %[ ] 
+
+\newglossaryentry{chidot}{type=ratesratios, 
+name={\ensuremath{\dot{\chi}} }, 
+description={Vapour mass flow fraction $\frac{\mflow_v}{\mflow_v+\mflow_s}$},% [\si{\kg\per\second / \kg\per\second}]},
+sort={chidot}} %$kg/kg$
+
+\newglossaryentry{Nu}{type=ratesratios, 
+name={\ensuremath{ N\negthinspace u }}, 
+description={Nusselt number $\frac{h_q~D_d}{k}$. The Nusselt number for a droplet is twice the ratio of convective to conductive heat transfer across the boundary} }% [\si{\watt\per\metre\squared\per\kelvin}$\times$\si{\meter} / \si{\watt\per\metre\per\kelvin} ]} }
+
+\newglossaryentry{Re}{type=ratesratios, 
+name={\ensuremath{ Re }}, 
+description={Reynolds number $\frac{\rho~u~D}{\mu}$} }%
+
+\newglossaryentry{Pr}{type=ratesratios, 
+name={\ensuremath{ Pr }}, 
+description={Prandtl number for vapour $\frac{\rho_v~\nu_v~c_{p,v}}{k_v}$} } %[\si{\kg\per\metre\tothe{3}}$\times$\si{\metre\squared\per\second}$\times$\si{\watt\per\kilogram\per\kelvin} / \si{\watt\per\metre\per\kelvin} ]} }
+
+\newglossaryentry{We}{type=ratesratios, 
+name={\ensuremath{ W\! e }}, 
+description={Weber number for a droplet $\frac{\rho_s~(D_{2'}/8)~u_d^2}{\sigma_s}$ } } %[\si{\kg\per\metre\tothe{3}}$\times$\si{\metre}$\times(\si{\meter\per\second})^2$ / \si{\kilogram\per\second\squared} ]
+
+\newglossaryentry{Sh}{type=ratesratios, 
+name={\ensuremath{ Sh }}, 
+description={Sherwood number for a droplet $\frac{h_m~D_d}{\rho_v \gls{Diff}}$} } 
+
+\newglossaryentry{Sc}{type=ratesratios, 
+name={\ensuremath{ Sc }}, 
+description={Schmidt number for a droplet $\frac{\nu_s}{\mathcal{D}}$} } 
+
+\newglossaryentry{Ma}{type=ratesratios, 
+name={\ensuremath{ M\! a }}, 
+description={Mach number $\frac{u}{c}$, with $c$ the sound velocity in the medium} } 
+
+\newglossaryentry{multiF}{type=ratesratios,
+name={\ensuremath{ \mathfrak{F} }}, 
+description={Pressure recovery ratio multiplier (normalised pressure recovery) $\frac{\Delta P_r}{\Delta P_{r,\text{incompressible}}}$} } % [ ]
+
+\newglossaryentry{rhostar}{type=ratesratios, sort={rhostar}, 
+name={\ensuremath{ \rho_* }}, 
+description={Ratio of densities $\rho_g/\rho_o$, where $\rho_o$ is the density of air } }
+
+\newglossaryentry{rhosv}{type=ratesratios, sort={rhosv}, 
+name={\ensuremath{ \rho_{sv} }}, 
+description={Ratio of the solution and vapour densities $\rho_s/\rho_v$} }
+
+\newglossaryentry{pr}{type=ratesratios, sort={pr}, 
+name={\ensuremath{ pr }}, 
+description={Ejector compression ratio $P_{\text{outlet}}/P_{\text{affected fluid, inlet}}$} }
+
+
+
+

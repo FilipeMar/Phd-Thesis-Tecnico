@@ -1,0 +1,57 @@
+;; This logfile was generated automatically by `xindy'
+;; at 05.04.2019  00:38:13
+;; Indexstyle: "/var/folders/l1/q2qtk1hj49b7m9p3_s6_cl440000gp/T/6dZwZ5GKjH", Rawindex: "/var/folders/l1/q2qtk1hj49b7m9p3_s6_cl440000gp/T/uZIh5J9Fs5", Output: "tese.latinletters-gls"
+
+
+Building indexentry-tree:
+Hierdepth of index is :TREE
+
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+
+Forming letter-groups:
+Letter-group: "†_" -> "C"
+Letter-group: "€" -> "A"
+Letter-group: "€" -> "A"
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+sort-other-runs: ("A") ("a") (BACKWARD FORWARD FORWARD) 1.
+sort-other-runs: ("A") ("a") (FORWARD FORWARD) 2.
+Letter-group: "€" -> "A"
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+Letter-group: "†_" -> "C"
+WARNING: unknown attribute `pageignore'! (ignored)
+WARNING: unknown attribute `pageignore'! (ignored)
+WARNING: unknown attribute `pageignore'! (ignored)
+WARNING: unknown attribute `pageignore'! (ignored)
+WARNING: unknown attribute `pageignore'! (ignored)
+WARNING: unknown attribute `pageignore'! (ignored)
+WARNING: unknown attribute `pageignore'! (ignored)
+WARNING: unknown attribute `pageignore'! (ignored)
+WARNING: unknown attribute `pageignore'! (ignored)
+WARNING: unknown attribute `pageignore'! (ignored)
+WARNING: unknown attribute `pageignore'! (ignored)
+WARNING: unknown attribute `pageignore'! (ignored)
+WARNING: unknown attribute `pageignore'! (ignored)
+WARNING: unknown attribute `pageignore'! (ignored)
+WARNING: unknown attribute `pageignore'! (ignored)
+WARNING: unknown attribute `pageignore'! (ignored)
+WARNING: unknown attribute `pageignore'! (ignored)
+WARNING: unknown attribute `pageignore'! (ignored)
+WARNING: unknown attribute `pageignore'! (ignored)
+WARNING: unknown attribute `pageignore'! (ignored)
+WARNING: unknown attribute `pageignore'! (ignored)
+WARNING: unknown attribute `pageignore'! (ignored)
+WARNING: unknown attribute `pageignore'! (ignored)
+WARNING: unknown attribute `pageignore'! (ignored)
+WARNING: unknown attribute `pageignore'! (ignored)
+WARNING: unknown attribute `pageignore'! (ignored)
+WARNING: unknown attribute `pageignore'! (ignored)
+WARNING: unknown attribute `pageignore'! (ignored)
+WARNING: unknown attribute `pageignore'! (ignored)
+WARNING: unknown attribute `pageignore'! (ignored)
+WARNING: unknown attribute `pageignore'! (ignored)
+WARNING: unknown attribute `pageignore'! (ignored)
+WARNING: unknown attribute `pageignore'! (ignored)
+WARNING: unknown attribute `pageignore'! (ignored)
+WARNING: unknown attribute `pageignore'! (ignored)

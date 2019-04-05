@@ -1,0 +1,71 @@
+\section{Section B}
+\label{sec:sectionb}
+
+\subsection{Subsection A}
+\label{subsec:subasectionB}
+
+The model described can also be represented as
+
+\begin{equation}
+\dot{\mathbf{x}}(t) = \mathbf{T}\mathbf{z}(y),\  \mathbf{y}(0) = \mathbf{y}_0,\  z\geq 0 \\
+\label{eq:dummyeq1}
+\end{equation}
+
+\noindent where
+
+\begin{equation}
+\mathbf{A} = \left[ \begin{array}{cc} -(a_{12} + a_{10}) & a_{21} \\ a_{12} & -(a_{21} + a_{20}) \end{array} \right],\ \mathbf{x} = \left[ \begin{array}{c} x_1 \\ x_2 \end{array} \right] \\
+\label{eq:dummyeq2}
+\end{equation}
+
+Also, using glossaries in the math environment, you can write
+\begin{equation}
+\gls{A} = \frac{\gls{mflow}\gls{_v}}{\rho u}
+\label{eq:dummyeq3}
+\end{equation}
+
+Note that \gls{A} is not \gls{a}.
+
+
+\subsection{Subsection B}
+\label{subsec:subbsectionB}
+
+Another example for the notation section: think about \gls{gamma}.
+And \gls{gamma}\gls{_p} with a subscript.
+
+\begin{table}[H]
+	\centering
+	\caption{Dummy Table.}
+	\begin{tabular}{|c|c|c|c|} \hline
+		\textbf{Vendor Name} 				& \textbf{Short Name}	& \textbf{Commercial Name}	& \textbf{Manufacturer}	\\ \hline \hline
+		\multirow{3}{*}{Text in Multiple Row}		&	ABC				&  ABC\textreg				& ABC SA			         \\ \cline{2-4}
+		 								&        DEF				&  DEF\textreg				& DEF SA				\\ \cline{2-4}
+										&        GHF			&  GHF\textreg				& GHF SA				\\ \hline
+		Text in Single Row					&        IJK				& IJK\textreg				& IJK SA				\\ \hline
+		Frescos SA						&        LMN			& LMN\textreg				& LMN SA				\\ \hline
+		Carros Lda.						&    \multicolumn{3}{|c|}{Text in Multiple Column}							\\ \hline
+	\end{tabular}
+	\label{tab:dummytable}
+\end{table}
+
+\citet{history} já diziam, corria o ano de \citeyear{history}...
+e em pequeno fica \cita{wikiurl}.
+\citet{label2} studied something, I believe.
+Vê a \figref{fig:dummy-geral}.
+
+\begin{figure}[htbp]
+  \centering
+  \begin{subfigure}[t]{0.4\textwidth}
+        \includegraphics[width=\textwidth, scale=1.0]{2.Chapter/dummy.pdf}
+        \caption{Legenda da Figura1.}
+        \label{fig:dummy1}
+  \end{subfigure}
+  \begin{subfigure}[t]{0.5\textwidth} %0.65\textwidth
+  \centering\captionsetup{width=.9\linewidth}
+        \includegraphics[width=\textwidth, scale=1.0]{2.Chapter/dummy.pdf} 
+        \caption{Legenda dummy2.}
+        \label{fig:dummy2}
+  \end{subfigure}
+  \caption[Figs dummy1 e 2]{Legenda global para dummy 1 e 2.}
+  \label{fig:dummy-geral}
+\end{figure}

@@ -1,0 +1,41 @@
+%
+%		Notation
+%
+%
+\pdfbookmark[1]{Notation}{los}
+
+%%%%%%%  Notação dividida em glossários
+\chapter*{Notation}
+
+\setglossarysection{section}
+%\setglossarystyle{list}
+\printglossary[type=latinletters, style=mylist,title=Latin Letters]
+\printglossary[type=greekletters]
+\printglossary[type=subscripts]
+\printglossary[type=ratesratios]
+
+%\glsaddall  
+\forallglsentries{\thislabel}%
+{%
+  \ifglsused{\thislabel}{}{\glsadd[format=ignore]{\thislabel}}%
+}
+
+
+%%%%%%  Notação, modo antigo: secções são subentradas
+
+%\input{./00.Definitions/Notation-List_opt.tex}
+%
+%%\printglossary[type=symbolslist,style=mylist,title=Notation]
+%\printglossary[style=mylist,title=Notation]  
+%%\printglossaries
+
+
+%%%%%%%%%%%%%%%%%  Final da Página de Notação
+
+\clearpage
+\thispagestyle{empty}
+
+\cleardoublepage
+% Pages number is starting now with arabic style... until now it was on roman mode
+\pagenumbering{arabic} \setcounter{page}{1}
+\baselineskip 18pt

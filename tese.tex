@@ -1,0 +1,106 @@
+%%
+%	version 1.0, 2019, Authors : Filipe Marques.
+%%
+\documentclass[defaultstyle,10pt,master,Helvetica]{01.thesis}
+%-- ! --> Usar '01.thesis_pt' para versão portuguesa 
+
+% Fonte: Helvetica is a similar font to Arial.
+
+%% Packages
+\input{00.Definitions/packages.tex}
+%% Page formatting
+\input{00.Definitions/pagesetup.tex}
+
+
+%-----------------------------------------------------------
+%-----------------------------------------------------------
+\begin{document}
+%% Use Main document Language
+\selectlanguage{english}
+%-- ! --> Usar 'portuguese' para versão portuguesa 
+%% ------
+\pagestyle{begin}
+
+%% ----------- COVER --------------
+% After deciding the language in which you'll write the thesis -- PT (Portuguese) or EN (English) -- you can
+% edit and select (uncomment) the respective cover file.
+%%%---------DRAFT
+\input{0.Inicio/1.cover_EN_draft.tex} 
+%\input{0.Inicio/1.cover_PT_draft.tex}
+%%%----------FINAL --- uncomment all code bellow and comment code above.
+%\input{0.Inicio/1.cover_EN_final.tex} 
+%%\input{0.Inicio/1.cover_PT_final.tex} 
+%\clearpage
+%\thispagestyle{empty}
+%\cleardoublepage
+%\input{0.Inicio/1.1stpage_EN_final.tex} 
+%%\input{0.Inicio/1.1stpage_PT_final.tex} 
+%%\clearpage
+
+
+%%-------------------------------------
+\clearpage
+% Since I am using double sided pages, the second page should be white.
+% Remember that when delivering the dissertation, IST requires for the cover to appear twice.
+
+\thispagestyle{empty}
+\cleardoublepage
+
+\setcounter{page}{1} \pagenumbering{roman} % --- Start with Roman numbering ---
+
+\baselineskip 18pt % line spacing: -12pt for single spacing
+                   %               -18pt for 1 1/2 spacing
+                   %               -24pt for double spacingnts}
+                   
+ %%%% Initial Chapters
+ \selectlanguage{english}
+\input{0.Inicio/4.Abstract.tex}
+\input{0.Inicio/5.Keywords.tex}
+\selectlanguage{portuguese}
+\input{0.Inicio/4.Resumo.tex}
+\input{0.Inicio/5.PalavrasChave.tex}
+\input{0.Inicio/3.Acknowledgments.tex}
+\input{0.Inicio/2.citation.tex} % --- Citation (optional) ---
+%% Use Main document Language
+\selectlanguage{english}
+%-- ! --> Usar 'portuguese' para versão portuguesa.
+%% ------
+\input{0.Inicio/6.Tables.tex}
+%\acresetall
+%% Remain list of table titles are set manualy
+\input{0.Inicio/7.Acronym.tex}
+%\input{0.Inicio/8.symbols.tex} %changed to glossaries
+\input{0.Inicio/8.Notation.tex}
+%% Use Main document Language
+\selectlanguage{english}
+%-- ! --> Usar 'portuguese' para versão portuguesa.
+%% Define the title of Chapter Table of Contents
+\mtcsettitle{minitoc}{Contents}
+%% ------
+\pagestyle{documentsimple}%Simple head
+\input{1.Introduction/main.tex}
+\input{2.Chapter/main.tex}
+\input{99.Conclusions/conclusions.tex}
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{Bibliography}
+%% Use with Cite and Natbib
+%% check styles in https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management
+\bibliographystyle{IEEEtranN}
+%\bibliographystyle{IEEEtran}
+\bibliography{02.biblio}
+%% Use with Biblatex (.bib file is set in Packages) (Not working)
+%\printbibliography
+
+\cleardoublepage
+
+\begin{appendices}
+	\begin{appendix}
+		\pagenumbering{bychapter}
+		\input{Appendices/appendixA.tex}     
+		\cleardoublepage
+	\end{appendix}
+\end{appendices}
+
+
+\end{document}
