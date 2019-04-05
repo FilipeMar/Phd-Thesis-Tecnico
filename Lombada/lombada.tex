@@ -1,0 +1,100 @@
+%	Lombada com título e nome por baixo em duas linhas
+%
+\documentclass[10pt,a4paper]{report}
+
+
+%%%Language packages
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{helvet}
+\renewcommand{\rmdefault}{phv} 
+\usepackage[T1]{fontenc}% T1 for european accents
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%Graphics packages
+%\usepackage[dvips]{graphicx}
+%\usepackage[pdftex]{color,graphicx}
+\usepackage{graphicx}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{rotating}
+
+
+\setlength{\marginparwidth}{0cm}
+\setlength{\marginparpush}{0cm}
+\setlength{\marginparsep}{0cm}
+
+%A4 21.0cm x 29.7cm
+\setlength{\paperwidth}{21cm}
+\setlength{\hoffset}{-1in}%1in=2.54cm
+\setlength{\oddsidemargin}{2.5cm}
+\setlength{\evensidemargin}{2.5cm}	\setlength{\textwidth}{16cm}%\paperwidth-(1in+\hoffset)-\{odd,even}sidemargin-2.5cm
+\setlength{\paperheight}{29.7cm}
+\setlength{\voffset}{-1in}
+\setlength{\topmargin}{0.cm}
+\setlength{\headheight}{0cm}
+\setlength{\headsep}{0cm}
+\setlength{\footskip}{.5cm}
+\setlength{\textheight}{29.7cm}
+
+\newsavebox{\foo} %salva antes. https://en.wikibooks.org/wiki/LaTeX/Boxes
+
+\begin{document}
+
+\savebox{\foo}{
+	
+	%\vfill
+	
+	\parbox{20.5cm}{
+		%\hspace{0pt}
+		
+		%\hfill
+		%\vfill
+		%\vspace*{\fill}
+		\vspace*{0.5cm}
+		
+		\centering\textbf{\large Titulo da Tese muito comprido} %\fontsize{12}{12}\selectfont ::https://en.wikibooks.org/wiki/LaTeX/Fonts
+		
+		\vspace{2mm} %precisa de linha de parágrafo antes e depois.
+		
+		\textbf{\normalsize Nome Sobrenome do Autor} %\fontsize{10}{10}\selectfont
+		
+		\vfill
+		%\vspace*{\fill}
+		%\hfill
+		
+		\vspace*{0.5cm}
+		
+	}
+	
+	%\vfill
+}
+
+%lombada
+%\begin{figure}[t] 
+% \flushleft
+\framebox{\begin{minipage}{2.cm} 
+% 	
+ \vspace{2cm}
+%  
+\hspace{0.5cm}	
+\begin{turn}{90}\usebox{\foo}\end{turn}
+\hspace{0.5cm}
+%\begin{turn}{90}Olá\end{turn}
+%    
+
+\vspace*{1cm}
+
+%  
+%\hspace{0.5cm}\includegraphics[width=3.cm,height=1.2cm,angle=90]{./istnewlogo}\hspace{0.5cm}
+\hspace*{0.5cm}\includegraphics[width=3.cm,height=1.2cm,angle=90]{./istlogo}\hspace*{0.5cm}
+%  
+\vspace{2.0cm}
+%  
+\end{minipage}} 
+%\end{figure} 
+
+
+\end{document}

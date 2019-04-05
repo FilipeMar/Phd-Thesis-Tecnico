@@ -1,0 +1,65 @@
+%\documentclass[10pt,a4paper,Helvetica]{book}
+\documentclass[defaultstyle,10pt,master,Helvetica]{./01.thesis}
+%% Packages
+\input{./00.Definitions/packages.tex}
+%% Page formatting
+\input{./00.Definitions/pagesetup.tex}
+
+\usepackage[english]{babel}
+
+\usepackage[papersize={,297mm},spine=2cm,cropmarks,textwidth=210mm,leftmargin=0in,nopagenumbers,color]{zwpagelayout}
+
+\pagestyle{empty}
+
+\begin{document}
+
+
+\pagestyle{empty}
+%%%%%%%%%Back cover
+\hbox to \textwidth{%
+  \vbox to \textheight{\hsize \UserWidth \centering
+\hfill
+%texto da Back Cover
+}\hss
+%%%%%%%%%%
+%%%%%%%%%Spine
+  \vbox to \textheight{ \hsize \CropSpine \centering %hsize width of pargraph
+  	 %\vspace*{2cm}
+  
+        \begin{sideways}
+        \parbox{20.5cm}{
+		
+		\vspace*{0.5cm}
+		
+		\centering\textbf{\large Title of the thesis / Titulo da tese} %\fontsize{12}{12}\selectfont ::https://en.wikibooks.org/wiki/LaTeX/Fonts
+		
+		\vspace{2mm} %precisa de linha de parágrafo antes e depois.
+		
+		\textbf{\normalsize Nome do autor / Author name} %\fontsize{10}{10}\selectfont
+		
+		\vfill
+		%\vspace*{\fill}
+		%\hfill
+		
+		\vspace*{0.5cm}
+		
+	}
+        \end{sideways}
+        %\vspace*{1cm}
+       \\[2cm] \includegraphics[width=3.cm,height=1.2cm,angle=90]{Cover/istlogo}
+        \\[2cm]
+        \vspace*{2.0cm}
+        }\hss
+        %\hspace{1mm}
+%%%%%%%%%%%
+  %Front cover
+  \vbox to \textheight{\hsize \UserWidth \centering
+   % \vbox to \textheight{\hsize 180mm \centering
+\begin{center}
+\parbox{0.38\textwidth}{
+\input{0.Inicio/1.cover_EN_final}
+}
+\end{center}
+}\hss}
+
+\end{document}
